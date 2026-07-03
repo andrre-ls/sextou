@@ -35,49 +35,26 @@
         color: #1a1a1a;
       }
 
-      .buttons {
-        display: flex;
-        gap: 1.25rem;
+      footer {
+        position: fixed;
+        bottom: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 0.75rem;
+        color: #9e9b94;
+        white-space: nowrap;
       }
 
-      button {
-        font-family: inherit;
-        font-size: 0.9375rem;
-        font-weight: normal;
-        padding: 0;
-        border: none;
-        background: none;
-        color: #6b6b6b;
-        cursor: pointer;
-        text-decoration: underline;
-        text-decoration-color: #c8c5bc;
-        text-underline-offset: 3px;
-        transition: color 120ms, text-decoration-color 120ms;
-      }
-
-      button:hover {
-        color: #1a1a1a;
-        text-decoration-color: #1a1a1a;
-      }
-
-      button:active {
-        color: #6b6b6b;
-      }
-
-      button:focus-visible {
-        outline: 1px solid #9ca3af;
-        outline-offset: 3px;
-        border-radius: 1px;
-      }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>sextou?</h1>
-      <div class="buttons">
-        <button>sim</button>
-        <button>não</button>
-      </div>
+      <h1 id="msg"></h1>
     </div>
+    <footer>co-created by André Santos &amp; Nuno Craveiro</footer>
+    <script>
+      document.getElementById('msg').textContent =
+        new Date().getDay() === 5 ? 'sextou!' : 'não sextou :(';
+    </script>
   </body>
 </html>
