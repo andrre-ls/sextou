@@ -23,13 +23,6 @@
         justify-content: center;
       }
 
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-      }
-
       h1 {
         font-size: 1.125rem;
         font-weight: normal;
@@ -49,14 +42,9 @@
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1 id="msg"></h1>
-    </div>
+    <h1 id="response">sextou?</h1>
     <footer>co-created by André Santos &amp; Nuno Craveiro</footer>
-    <script>
-      document.getElementById("msg").textContent =
-        new Date().getDay() === 5 ? "sextou!" : "não sextou :(";
-    </script>
+    <script src="script.js"></script>
     <script
       data-goatcounter="https://sextou.goatcounter.com/count"
       async
