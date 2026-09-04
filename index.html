@@ -28,6 +28,8 @@
         font-weight: normal;
         letter-spacing: 0;
         color: #1a1a1a;
+        position: relative;
+        z-index: 1;
       }
 
       footer {
@@ -38,12 +40,42 @@
         font-size: 0.75rem;
         color: #9e9b94;
         white-space: nowrap;
+        z-index: 1;
+      }
+
+      #visuals {
+        position: fixed;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 180ms ease-in-out;
+      }
+
+      body[data-visuals] #visuals {
+        opacity: 1;
+        transition: opacity 250ms ease-in-out;
+      }
+
+      h1,
+      footer {
+        transition: color 110ms ease-in-out;
+      }
+
+      body[data-visuals] h1,
+      body[data-visuals] footer {
+        color: #ffffff;
+        transition: color 250ms ease-in-out;
       }
     </style>
   </head>
   <body>
     <h1 id="response">sextou?</h1>
     <footer>co-created by André Santos &amp; Nuno Craveiro</footer>
+    <script src="visuals.js"></script>
     <script src="script.js"></script>
     <script
       data-goatcounter="https://sextou.goatcounter.com/count"
